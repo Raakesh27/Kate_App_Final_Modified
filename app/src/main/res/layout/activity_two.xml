@@ -25,9 +25,8 @@
             android:layout_below="@+id/PatientNotification"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="109dp"
-            android:layout_width="225dp"
-            android:layout_height="75dp"
-            android:background="@drawable/my_personal_buttons"/>
+            android:layout_width="150dp"
+            android:layout_height="50dp" />
 
         <TextView
             android:text="\n 2 Patients coming in from automobile accident. ETA: 20 minutes"
