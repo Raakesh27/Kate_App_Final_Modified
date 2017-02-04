@@ -50,7 +50,7 @@
         android:textStyle="normal|bold" />
 
     <TextView
-        android:text="120/80 "
+        android:text=" "
         android:id="@+id/BBNum"
         android:layout_height="50dp"
         android:textSize="28sp"
@@ -74,7 +74,6 @@
         android:layout_alignStart="@+id/textBP" />
 
     <TextView
-        android:text="70 "
         android:layout_height="50dp"
         android:id="@+id/pulseNum"
         android:textSize="28sp"
@@ -99,7 +98,6 @@
         android:layout_alignEnd="@+id/textPulse" />
 
     <TextView
-        android:text="98.6 "
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/tempNum"
@@ -111,7 +109,6 @@
         android:layout_toStartOf="@+id/graphTemp" />
 
     <TextView
-        android:text="18 "
         android:layout_width="100dp"
         android:id="@+id/RRNum"
         android:layout_height="50dp"

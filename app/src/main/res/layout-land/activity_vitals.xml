@@ -2,17 +2,153 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
+    <TextView
+        android:text="Temp"
+        android:layout_height="50dp"
+        android:id="@+id/textTemp"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="viewStart"
+        android:layout_alignTop="@+id/graphTemp"
+        android:layout_alignStart="@+id/textPulse"
+        android:layout_width="80dp" />
+
+    <TextView
+        android:text="BP"
+        android:id="@+id/textBP"
+        android:layout_height="50dp"
+        android:layout_marginStart="55dp"
+        android:layout_width="80dp"
+        android:layout_alignTop="@+id/graphBP"
+        android:layout_alignParentStart="true"
+        android:textSize="28sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="Pulse"
+        android:id="@+id/textPulse"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="viewStart"
+        android:layout_weight="0.03"
+        android:layout_height="50dp"
+        android:layout_width="80dp"
+        android:layout_alignTop="@+id/graphPulse"
+        android:layout_alignStart="@+id/textBP" />
+
+    <TextView
+        android:text="RR"
+        android:layout_height="50dp"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="viewStart"
+        android:id="@+id/textRR"
+        android:layout_width="80dp"
+        android:layout_alignBaseline="@+id/RRNum"
+        android:layout_alignBottom="@+id/RRNum"
+        android:layout_alignStart="@+id/textPulse"
+        android:layout_alignEnd="@+id/textPulse" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/tempNum"
+        android:textStyle="normal|bold"
+        android:textSize="28sp"
+        android:textAlignment="textEnd"
+        android:layout_alignBaseline="@+id/textTemp"
+        android:layout_alignBottom="@+id/textTemp"
+        android:layout_toStartOf="@+id/graphTemp" />
+
+    <TextView
+        android:id="@+id/BBNum"
+        android:layout_height="50dp"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:layout_width="100dp"
+        android:textAlignment="textEnd"
+        android:layout_alignBaseline="@+id/textBP"
+        android:layout_alignBottom="@+id/textBP"
+        android:layout_alignStart="@+id/textBP"
+        android:layout_marginStart="49dp" />
+
+    <TextView
+        android:layout_height="50dp"
+        android:id="@+id/pulseNum"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="textEnd"
+        android:layout_width="100dp"
+        android:layout_above="@+id/graphRR"
+        android:layout_toStartOf="@+id/graphPulse" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graphTemp"
+        android:layout_height="50dp"
+        android:layout_width="350dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/graphRR"
+        android:layout_toEndOf="@+id/RRNum" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graphRR"
+        android:layout_height="50dp"
+        android:layout_width="350dp"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/graphPulse"
+        android:layout_toEndOf="@+id/RRNum" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graphPulse"
+        android:layout_height="50dp"
+        android:layout_width="350dp"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/BBNum"
+        android:layout_toEndOf="@+id/BBNum" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:id="@+id/RRNum"
+        android:layout_height="50dp"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="textEnd"
+        android:layout_alignTop="@+id/graphRR"
+        android:layout_alignStart="@+id/pulseNum"
+        android:layout_above="@+id/graphTemp" />
+
+    <TextView
+        android:id="@+id/summaryText"
+        android:background="@drawable/my_personal_border"
+        android:typeface="sans"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:layout_marginEnd="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="19dp"
+        android:layout_height="250dp"
+        android:layout_width="325dp" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graphBP"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/patient_two_Button"
+        android:layout_toEndOf="@+id/BBNum" />
+
     <Button
         android:text="Patient 1"
         android:layout_width="125dp"
         android:layout_height="125dp"
-        android:layout_marginStart="22dp"
         android:id="@+id/patient_one_Button"
+        style="@android:style/Widget.Button.Inset"
         android:background="@drawable/my_personal_buttons"
-        style="@android:style/Widget.DeviceDefault.Button.Inset"
-        android:layout_marginTop="45dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:elevation="0dp"
+        android:layout_alignTop="@+id/summaryText"
+        android:layout_toEndOf="@+id/BBNum" />
 
     <Button
         android:text="Patient 2"
@@ -22,8 +158,19 @@
         style="@android:style/Widget.Button.Inset"
         android:background="@drawable/my_personal_buttons"
         android:elevation="0dp"
-        android:layout_marginTop="78dp"
-        android:layout_below="@+id/patient_one_Button"
-        android:layout_alignStart="@+id/patient_one_Button" />
+        android:layout_alignTop="@+id/summaryText"
+        android:layout_alignEnd="@+id/graphBP" />
+
+    <Button
+        android:text="Create Action Plan"
+        android:id="@+id/buttonCAP"
+        android:layout_height="75dp"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
+        android:layout_width="225dp"
+        android:background="@drawable/my_personal_buttons"
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/graphRR"
+        android:layout_alignEnd="@+id/summaryText" />
+
 
 </RelativeLayout>

@@ -13,20 +13,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
-
-        <Button
-            android:text="View Vitals"
-            android:id="@+id/viewVitalsButton"
-            android:layout_height="75dp"
-            style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
-            android:layout_width="225dp"
-            android:background="@drawable/my_personal_buttons"
-            android:textSize="18sp"
-            android:layout_marginBottom="257dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="29dp">
 
         <TextView
             android:text="\n 2 Patients coming in from automobile accident. ETA: 20 minutes"
@@ -38,9 +27,21 @@
             android:layout_width="450dp"
             android:layout_height="125dp"
             android:textSize="24sp"
-            android:layout_marginBottom="59dp"
-            android:layout_above="@+id/viewVitalsButton"
+            android:layout_marginTop="61dp"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
+
+        <Button
+            android:text="View Vitals"
+            android:id="@+id/viewVitalsButton"
+            android:layout_height="75dp"
+            style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
+            android:layout_width="225dp"
+            android:background="@drawable/my_personal_buttons"
+            android:textSize="18sp"
+            android:layout_below="@+id/PatientNotification"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="58dp" />
     </RelativeLayout>
 
 </RelativeLayout>
