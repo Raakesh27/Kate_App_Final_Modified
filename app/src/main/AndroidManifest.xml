@@ -17,6 +17,7 @@
         </activity>
         <activity android:name="com.example.wiehan.kate_app_final.Activity_Two" />
         <activity android:name="com.example.wiehan.kate_app_final.Activity_Vitals" />
+        <activity android:name="com.example.wiehan.kate_app_final.Activity_Game" />
     </application>
 
 </manifest>
