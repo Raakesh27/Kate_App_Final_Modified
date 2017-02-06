@@ -51,7 +51,7 @@
 
     <TextView
         android:text=" "
-        android:id="@+id/BBNum"
+        android:id="@+id/BPNum"
         android:layout_height="50dp"
         android:textSize="28sp"
         android:textStyle="normal|bold"

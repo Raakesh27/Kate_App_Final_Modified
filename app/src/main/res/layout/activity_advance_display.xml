@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_advane_display"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.wiehan.kate_app_final.Advance_Display">
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graphTempAdvance"
+        android:layout_height="50dp"
+        android:layout_width="350dp"
+        android:layout_above="@+id/textInfo"
+        android:layout_alignStart="@+id/buttonCAPAdvance"
+        android:layout_marginBottom="19dp" />
+
+    <TextView
+        android:layout_height="50dp"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="textEnd"
+        android:layout_width="100dp"
+        android:layout_alignBaseline="@+id/textRRAdvance"
+        android:layout_alignBottom="@+id/textRRAdvance"
+        android:layout_toStartOf="@+id/graphPulseAdvance"
+        android:id="@+id/RRNumAdvance" />
+
+    <Button
+        android:text="Create Action Plan"
+        android:id="@+id/buttonCAPAdvance"
+        android:layout_height="75dp"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
+        android:layout_width="225dp"
+        android:background="@drawable/my_personal_buttons"
+        android:textSize="18sp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graphRRAdvance"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="11dp"
+        android:layout_above="@+id/graphTempAdvance"
+        android:layout_alignStart="@+id/graphTempAdvance" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graphPulseAdvance"
+        android:layout_height="50dp"
+        android:layout_width="350dp"
+        android:layout_marginBottom="11dp"
+        android:layout_above="@+id/graphRRAdvance"
+        android:layout_alignStart="@+id/graphRRAdvance" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graphBBAdvance"
+        android:layout_height="50dp"
+        android:layout_width="350dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/graphPulseAdvance"
+        android:layout_alignStart="@+id/graphPulseAdvance" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:id="@+id/tempNumAdvance"
+        android:layout_height="50dp"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="textEnd"
+        android:layout_alignBaseline="@+id/textTempAdvance"
+        android:layout_alignBottom="@+id/textTempAdvance"
+        android:layout_toStartOf="@+id/graphTempAdvance" />
+
+    <TextView
+        android:text=" "
+        android:id="@+id/pulseNumAdvance"
+        android:layout_height="50dp"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:layout_width="100dp"
+        android:textAlignment="textEnd"
+        android:layout_alignBaseline="@+id/textPulseAdvance"
+        android:layout_alignBottom="@+id/textPulseAdvance"
+        android:layout_toStartOf="@+id/graphPulseAdvance" />
+
+    <TextView
+        android:id="@+id/textInfo"
+        android:background="@drawable/my_personal_border"
+        android:typeface="sans"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textAlignment="center"
+        android:layout_width="450dp"
+        android:textSize="24sp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="11dp"
+        android:layout_above="@+id/buttonCAPAdvance"
+        android:layout_alignStart="@+id/tempNumAdvance" />
+
+    <Button
+        android:text="Patient 2"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:id="@+id/patient_Two_Button_Adv"
+        style="@android:style/Widget.Button.Inset"
+        android:background="@drawable/my_personal_buttons"
+        android:elevation="0dp"
+        android:layout_alignTop="@+id/patient_One_Button_Adv"
+        android:layout_alignEnd="@+id/textView10" />
+
+    <TextView
+        android:text="Summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textSummaryAdv"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:id="@+id/RRSumP2"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/pulseSumP2"
+        android:layout_alignBottom="@+id/pulseSumP2"
+        android:layout_toEndOf="@+id/pulseSumP2" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/graphBPAdvance"
+        android:textStyle="normal|bold"
+        android:textSize="28sp"
+        android:textAlignment="textEnd"
+        android:layout_alignTop="@+id/graphBBAdvance"
+        android:layout_toStartOf="@+id/graphBBAdvance" />
+
+    <TextView
+        android:text="P1:"
+        android:layout_height="25dp"
+        android:id="@+id/textP1"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:layout_width="25dp"
+        android:layout_alignBaseline="@+id/BPsumP1"
+        android:layout_alignBottom="@+id/BPsumP1"
+        android:layout_alignStart="@+id/textP2" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:id="@+id/RRSumP1"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/pulseSumP1"
+        android:layout_alignBottom="@+id/pulseSumP1"
+        android:layout_toEndOf="@+id/pulseSumP1" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:id="@+id/pulseSumP1"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/textSummaryAdv"
+        android:layout_toEndOf="@+id/BPsumP1"
+        android:layout_marginTop="11dp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="100dp"
+        android:id="@+id/BPsumP1"
+        android:textStyle="normal|bold"
+        android:layout_height="25dp"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/pulseSumP1"
+        android:layout_alignBottom="@+id/pulseSumP1"
+        android:layout_toStartOf="@+id/pulseSumP2" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_height="25dp"
+        android:id="@+id/BPsumP2"
+        android:layout_width="100dp"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/pulseSumP2"
+        android:layout_alignBottom="@+id/pulseSumP2"
+        android:layout_toStartOf="@+id/pulseSumP2" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="100dp"
+        android:id="@+id/pulseSumP2"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_height="25dp"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/RRSumP1"
+        android:layout_alignStart="@+id/patient_One_Button_Adv" />
+
+    <TextView
+        android:text="P2:"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/textP2"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/BPsumP2"
+        android:layout_alignBottom="@+id/BPsumP2"
+        android:layout_alignStart="@+id/textPatientNo" />
+
+    <Button
+        android:text="Patient 1"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:id="@+id/patient_One_Button_Adv"
+        style="@android:style/Widget.Button.Inset"
+        android:background="@drawable/my_personal_buttons"
+        android:layout_marginLeft="84dp"
+        android:layout_marginEnd="13dp"
+        android:layout_above="@+id/textView10"
+        android:layout_alignEnd="@+id/textSummaryAdv"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:text="Trends of Vital Trends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView10"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:layout_above="@+id/graphBBAdvance"
+        android:layout_alignStart="@+id/patient_One_Button_Adv" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:id="@+id/tempSumP1"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/RRSumP1"
+        android:layout_alignBottom="@+id/RRSumP1"
+        android:layout_alignEnd="@+id/patient_Two_Button_Adv" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:id="@+id/tempSumP2"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/RRSumP2"
+        android:layout_alignBottom="@+id/RRSumP2"
+        android:layout_alignStart="@+id/tempSumP1" />
+
+    <TextView
+        android:text="Temp"
+        android:layout_height="50dp"
+        android:id="@+id/textTempAdvance"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="viewStart"
+        android:layout_width="80dp"
+        android:layout_below="@+id/graphRRAdvance"
+        android:layout_alignStart="@+id/textRRAdvance" />
+
+    <TextView
+        android:text="RR"
+        android:layout_height="50dp"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="viewStart"
+        android:id="@+id/textRRAdvance"
+        android:layout_width="80dp"
+        android:layout_below="@+id/graphPulseAdvance"
+        android:layout_alignStart="@+id/textPulseAdvance" />
+
+    <TextView
+        android:text="BP"
+        android:id="@+id/textBPAdvance"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_width="80dp"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/graphBPAdvance"
+        android:layout_alignBottom="@+id/graphBPAdvance"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Pulse"
+        android:id="@+id/textPulseAdvance"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="viewStart"
+        android:layout_weight="0.03"
+        android:layout_height="50dp"
+        android:layout_width="80dp"
+        android:layout_below="@+id/graphBBAdvance"
+        android:layout_alignStart="@+id/textBPAdvance" />
+
+    <TextView
+        android:id="@+id/textPatientNo"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        android:layout_height="28dp"
+        android:textAlignment="viewStart"
+        android:layout_alignTop="@+id/patient_One_Button_Adv"
+        android:layout_alignStart="@+id/textBPAdvance"
+        android:layout_width="125dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:id="@+id/textPatientInfo"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="viewStart"
+        android:layout_below="@+id/textPatientNo"
+        android:layout_alignStart="@+id/textPatientNo"
+        android:layout_marginTop="11dp" />
+
+</RelativeLayout>

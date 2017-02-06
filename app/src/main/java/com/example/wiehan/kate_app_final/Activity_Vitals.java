@@ -8,13 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.jjoe64.graphview.GraphView;
-import com.jjoe64.graphview.GridLabelRenderer;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
-
-import org.w3c.dom.Text;
-
-import java.util.Random;
 
 public class Activity_Vitals extends AppCompatActivity {
 
@@ -22,7 +17,7 @@ public class Activity_Vitals extends AppCompatActivity {
     GraphView graphPulse ;
     GraphView graphRR;
     GraphView graphTemp;
-    TextView BBNum ;
+    TextView BPNum ;
     TextView pulseNum ;
     TextView RRNum ;
     TextView tempNum ;
@@ -36,7 +31,7 @@ public class Activity_Vitals extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vitals);
 
-        BBNum = (TextView)  findViewById(R.id.BBNum) ;
+        BPNum = (TextView)  findViewById(R.id.BPNum) ;
         pulseNum = (TextView)  findViewById(R.id.pulseNum) ;
         RRNum = (TextView)  findViewById(R.id.RRNum) ;
         tempNum = (TextView)  findViewById(R.id.tempNum) ;
@@ -45,6 +40,8 @@ public class Activity_Vitals extends AppCompatActivity {
         graphBP = (GraphView)findViewById(R.id.graphBP) ;
         graphBP.getGridLabelRenderer().setHorizontalLabelsVisible(false);
         graphBP.getGridLabelRenderer().setVerticalLabelsVisible(false);
+
+
 
         graphPulse = (GraphView)findViewById(R.id.graphPulse) ;
         graphPulse.getGridLabelRenderer().setHorizontalLabelsVisible(false);
@@ -78,7 +75,7 @@ public class Activity_Vitals extends AppCompatActivity {
                 graphRR.removeAllSeries();
                 graphTemp.removeAllSeries();
 
-                BBNum.setText("120/80 ");
+                BPNum.setText("120/80 ");
                 pulseNum.setText("70 ");
                 RRNum.setText("18 ");
                 tempNum.setText("98.6 ");
@@ -110,7 +107,7 @@ public class Activity_Vitals extends AppCompatActivity {
                 graphRR.removeAllSeries();
                 graphTemp.removeAllSeries();
 
-                BBNum.setText("124/80 ");
+                BPNum.setText("124/80 ");
                 pulseNum.setText("78 ");
                 RRNum.setText("16 ");
                 tempNum.setText("97.2 ");

@@ -15,9 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.wiehan.kate_app_final.Activity_Two" />
-        <activity android:name="com.example.wiehan.kate_app_final.Activity_Vitals" />
-        <activity android:name="com.example.wiehan.kate_app_final.Activity_Game" />
+        <activity android:name=".Activity_Two" />
+        <activity android:name=".Activity_Vitals" />
+        <activity android:name=".Activity_Game" />
+        <activity android:name=".Activity_Scenario" />
+        <activity android:name=".Advance_Display"></activity>
     </application>
 
 </manifest>

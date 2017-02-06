@@ -61,7 +61,7 @@
         android:layout_toStartOf="@+id/graphTemp" />
 
     <TextView
-        android:id="@+id/BBNum"
+        android:id="@+id/BPNum"
         android:layout_height="50dp"
         android:textSize="28sp"
         android:textStyle="normal|bold"
@@ -103,8 +103,8 @@
         android:layout_height="50dp"
         android:layout_width="350dp"
         android:layout_marginTop="11dp"
-        android:layout_below="@+id/BBNum"
-        android:layout_toEndOf="@+id/BBNum" />
+        android:layout_below="@+id/BPNum"
+        android:layout_toEndOf="@+id/BPNum" />
 
     <TextView
         android:layout_width="100dp"
@@ -137,7 +137,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="44dp"
         android:layout_below="@+id/patient_two_Button"
-        android:layout_toEndOf="@+id/BBNum" />
+        android:layout_toEndOf="@+id/BPNum" />
 
     <Button
         android:text="Patient 1"
@@ -148,7 +148,7 @@
         android:background="@drawable/my_personal_buttons"
         android:elevation="0dp"
         android:layout_alignTop="@+id/summaryText"
-        android:layout_toEndOf="@+id/BBNum" />
+        android:layout_toEndOf="@+id/BPNum" />
 
     <Button
         android:text="Patient 2"
