@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button startButton = (Button) findViewById(R.id.buttonStart);
+        Button startButton = (Button) findViewById(R.id.buttonScen2);
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override

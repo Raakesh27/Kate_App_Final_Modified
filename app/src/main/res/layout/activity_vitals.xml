@@ -163,8 +163,8 @@
         android:layout_toStartOf="@+id/graphBP" />
 
     <Button
-        android:text="Create Action Plan"
-        android:id="@+id/buttonCAP"
+        android:text="Continue"
+        android:id="@+id/buttonConGame"
         android:layout_height="75dp"
         style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
         android:layout_width="225dp"

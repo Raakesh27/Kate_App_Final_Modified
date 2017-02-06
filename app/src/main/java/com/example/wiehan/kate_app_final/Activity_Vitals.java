@@ -40,24 +40,36 @@ public class Activity_Vitals extends AppCompatActivity {
         graphBP = (GraphView)findViewById(R.id.graphBP) ;
         graphBP.getGridLabelRenderer().setHorizontalLabelsVisible(false);
         graphBP.getGridLabelRenderer().setVerticalLabelsVisible(false);
+        graphBP.getViewport().setYAxisBoundsManual(true);
+        graphBP.getViewport().setMinY(0);
+        graphBP.getViewport().setMaxY(1.5);
 
 
 
         graphPulse = (GraphView)findViewById(R.id.graphPulse) ;
         graphPulse.getGridLabelRenderer().setHorizontalLabelsVisible(false);
         graphPulse.getGridLabelRenderer().setVerticalLabelsVisible(false);
+        graphPulse.getViewport().setYAxisBoundsManual(true);
+        graphPulse.getViewport().setMinY(0);
+        graphPulse.getViewport().setMaxY(1);
 
         graphRR = (GraphView)findViewById(R.id.graphRR) ;
         graphRR.getGridLabelRenderer().setHorizontalLabelsVisible(false);
         graphRR.getGridLabelRenderer().setVerticalLabelsVisible(false);
+        graphRR.getViewport().setYAxisBoundsManual(true);
+        graphRR.getViewport().setMinY(0);
+        graphRR.getViewport().setMaxY(1);
 
         graphTemp = (GraphView)findViewById(R.id.graphTemp) ;
         graphTemp.getGridLabelRenderer().setHorizontalLabelsVisible(false);
         graphTemp.getGridLabelRenderer().setVerticalLabelsVisible(false);
+        graphTemp.getViewport().setYAxisBoundsManual(true);
+        graphTemp.getViewport().setMinY(0);
+        graphTemp.getViewport().setMaxY(1);
 
-        Button createActionPlan = (Button) findViewById(R.id.buttonCAP);
+        Button buttonConGame = (Button) findViewById(R.id.buttonConGame);
 
-        createActionPlan.setOnClickListener(new View.OnClickListener() {
+        buttonConGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Activity_Game.class);
@@ -141,8 +153,8 @@ public class Activity_Vitals extends AppCompatActivity {
         double x = 0;
         double y = 0.5 ;
         for (int i = 0; i < 400; i++) {
-            x += 0.1;
-            if(y <= 1) {
+            x += 0.2;
+            if(y <= 0.75) {
                 y +=0.005;
             }
 
@@ -151,8 +163,9 @@ public class Activity_Vitals extends AppCompatActivity {
         x = 0 ;
         y = 0 ;
         for (int i = 0; i < 400; i++) {
-            x += 0.1;
-            y = Math.cos(x) +0.5;
+            x += 0.4;
+            y = Math.cos(x) * 0.8;
+
             if(y <0) {
                 y = 0 ;
             }
@@ -162,7 +175,7 @@ public class Activity_Vitals extends AppCompatActivity {
         x = 0 ;
         y = 0.25 ;
         for (int i = 0; i < 400; i++) {
-            x += 0.1;
+            x += 0.2;
             if(y <= 0.5) {
                 y +=0.002;
             }
@@ -170,11 +183,13 @@ public class Activity_Vitals extends AppCompatActivity {
         }
 
         x = 0 ;
-        y = 1 ;
+        y = 0.5 ;
         for (int i = 0; i < 400; i++) {
-            x += 0.1 ;
+            x += 0.2 ;
             if(x > 20) {
-                y += 0.001 ;
+                if(y<0.9) {
+                    y += 0.001;
+                }
             }
             seriesTemp.appendData(new DataPoint(x, y), true, 400);
         }
@@ -184,8 +199,8 @@ public class Activity_Vitals extends AppCompatActivity {
         double x = 0;
         double y = 0.5 ;
         for (int i = 0; i < 400; i++) {
-            x += 0.1;
-            if(y <= 1) {
+            x += 0.2;
+            if(y <= 0.75) {
                 y +=0.0025;
             }
 
@@ -194,8 +209,8 @@ public class Activity_Vitals extends AppCompatActivity {
         x = 0 ;
         y = 0 ;
         for (int i = 0; i < 400; i++) {
-            x += 0.25;
-            y = Math.cos(x) +0.5;
+            x += 0.4;
+            y = Math.cos(x);
             if(y <0) {
                 y = 0 ;
             }
@@ -205,7 +220,7 @@ public class Activity_Vitals extends AppCompatActivity {
         x = 0 ;
         y = 0.25 ;
         for (int i = 0; i < 400; i++) {
-            x += 0.1;
+            x += 0.2;
             if(y <= 0.4) {
                 y +=0.00125;
             }
@@ -213,11 +228,13 @@ public class Activity_Vitals extends AppCompatActivity {
         }
 
         x = 0 ;
-        y = 1 ;
+        y = 0.5 ;
         for (int i = 0; i < 400; i++) {
-            x += 0.1 ;
+            x += 0.2 ;
             if(x > 25) {
-                y += 0.001 ;
+                if(y<0.8) {
+                    y += 0.001;
+                }
             }
             seriesTemp.appendData(new DataPoint(x, y), true, 400);
         }

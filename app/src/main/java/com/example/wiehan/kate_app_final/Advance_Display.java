@@ -59,21 +59,49 @@ public class Advance_Display extends AppCompatActivity {
         graphBBAdvance.getGridLabelRenderer().setHorizontalLabelsVisible(false);
         graphBBAdvance.getGridLabelRenderer().setVerticalLabelsVisible(false);
         graphBBAdvance.getViewport().setScrollable(true);
+        graphBBAdvance.getViewport().setXAxisBoundsManual(true);
+        graphBBAdvance.getViewport().setScrollableY(false);
+        graphBBAdvance.getViewport().setMinX(0);
+        graphBBAdvance.getViewport().setMaxX(100);
+        graphBBAdvance.getViewport().setYAxisBoundsManual(true);
+        graphBBAdvance.getViewport().setMinY(0);
+        graphBBAdvance.getViewport().setMaxY(1.5);
 
         graphPulseAdvance = (GraphView)findViewById(R.id.graphPulseAdvance) ;
         graphPulseAdvance.getGridLabelRenderer().setHorizontalLabelsVisible(false);
         graphPulseAdvance.getGridLabelRenderer().setVerticalLabelsVisible(false);
         graphPulseAdvance.getViewport().setScrollable(true);
+        graphPulseAdvance.getViewport().setXAxisBoundsManual(true);
+        graphPulseAdvance.getViewport().setScrollableY(false);
+        graphPulseAdvance.getViewport().setMinX(0);
+        graphPulseAdvance.getViewport().setMaxX(100);
+        graphPulseAdvance.getViewport().setYAxisBoundsManual(true);
+        graphPulseAdvance.getViewport().setMinY(0);
+        graphPulseAdvance.getViewport().setMaxY(1);
 
         graphRRAdvance = (GraphView)findViewById(R.id.graphRRAdvance) ;
         graphRRAdvance.getGridLabelRenderer().setHorizontalLabelsVisible(false);
         graphRRAdvance.getGridLabelRenderer().setVerticalLabelsVisible(false);
         graphRRAdvance.getViewport().setScrollable(true);
+        graphRRAdvance.getViewport().setXAxisBoundsManual(true);
+        graphRRAdvance.getViewport().setScrollableY(false);
+        graphRRAdvance.getViewport().setMinX(0);
+        graphRRAdvance.getViewport().setMaxX(100);
+        graphRRAdvance.getViewport().setYAxisBoundsManual(true);
+        graphRRAdvance.getViewport().setMinY(0);
+        graphRRAdvance.getViewport().setMaxY(1);
 
         graphTempAdvance = (GraphView)findViewById(R.id.graphTempAdvance) ;
         graphTempAdvance.getGridLabelRenderer().setHorizontalLabelsVisible(false);
         graphTempAdvance.getGridLabelRenderer().setVerticalLabelsVisible(false);
         graphTempAdvance.getViewport().setScrollable(true);
+        graphTempAdvance.getViewport().setXAxisBoundsManual(true);
+        graphTempAdvance.getViewport().setScrollableY(false);
+        graphTempAdvance.getViewport().setMinX(0);
+        graphTempAdvance.getViewport().setMaxX(100);
+        graphTempAdvance.getViewport().setYAxisBoundsManual(true);
+        graphTempAdvance.getViewport().setMinY(0);
+        graphTempAdvance.getViewport().setMaxY(1);
 
         BPSumP1.setText("BP 120/80");
         BPSumP2.setText("BP 124/80");
@@ -89,7 +117,7 @@ public class Advance_Display extends AppCompatActivity {
         createActionPlan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Activity_Scenario.class);
+                Intent intent = new Intent(getApplicationContext(), Action_Plan.class);
                 startActivity(intent);
             }
         });
@@ -174,86 +202,91 @@ public class Advance_Display extends AppCompatActivity {
     private void patienOneRandomGraphs() {
         double x = 0;
         double y = 0.5 ;
-        for (int i = 0; i < 400; i++) {
-            x += 0.1;
-            if(y <= 1) {
+        for (int i = 0; i < 1000; i++) {
+            x += 0.2;
+            if(y <= 0.75) {
                 y +=0.005;
             }
 
-            seriesBP.appendData(new DataPoint(x, y), true, 400);
+            seriesBP.appendData(new DataPoint(x, y), true, 1000);
         }
         x = 0 ;
         y = 0 ;
-        for (int i = 0; i < 400; i++) {
-            x += 0.1;
-            y = Math.cos(x) +0.5;
+        for (int i = 0; i < 1000; i++) {
+            x += 0.4;
+            y = Math.cos(x) *0.8;
+
             if(y <0) {
                 y = 0 ;
             }
-            seriesPulse.appendData(new DataPoint(x, y), true, 400);
+            seriesPulse.appendData(new DataPoint(x, y), true, 1000);
         }
 
         x = 0 ;
         y = 0.25 ;
-        for (int i = 0; i < 400; i++) {
-            x += 0.1;
+        for (int i = 0; i < 1000; i++) {
+            x += 0.2;
             if(y <= 0.5) {
                 y +=0.002;
             }
-            seriesRR.appendData(new DataPoint(x, y), true, 400);
+            seriesRR.appendData(new DataPoint(x, y), true, 1000);
         }
 
         x = 0 ;
-        y = 1 ;
-        for (int i = 0; i < 400; i++) {
-            x += 0.1 ;
+        y = 0.5 ;
+        for (int i = 0; i < 1000; i++) {
+            x += 0.2 ;
             if(x > 20) {
-                y += 0.001 ;
+                if(y<0.9) {
+                    y += 0.001;
+                }
             }
-            seriesTemp.appendData(new DataPoint(x, y), true, 400);
+            seriesTemp.appendData(new DataPoint(x, y), true, 1000);
         }
     }
 
     private void patientTwoRandomGraphs() {
         double x = 0;
         double y = 0.5 ;
-        for (int i = 0; i < 400; i++) {
-            x += 0.1;
-            if(y <= 1) {
+        for (int i = 0; i < 1000; i++) {
+            x += 0.2;
+            if(y <= 0.75) {
                 y +=0.0025;
             }
 
-            seriesBP.appendData(new DataPoint(x, y), true, 400);
+            seriesBP.appendData(new DataPoint(x, y), true, 1000);
         }
         x = 0 ;
         y = 0 ;
-        for (int i = 0; i < 400; i++) {
-            x += 0.25;
-            y = Math.cos(x) +0.5;
+        for (int i = 0; i < 1000; i++) {
+            x += 0.4;
+            y = Math.cos(x);
             if(y <0) {
                 y = 0 ;
             }
-            seriesPulse.appendData(new DataPoint(x, y), true, 400);
+            seriesPulse.appendData(new DataPoint(x, y), true, 1000);
         }
 
         x = 0 ;
         y = 0.25 ;
-        for (int i = 0; i < 400; i++) {
-            x += 0.1;
+        for (int i = 0; i < 1000; i++) {
+            x += 0.2;
             if(y <= 0.4) {
                 y +=0.00125;
             }
-            seriesRR.appendData(new DataPoint(x, y), true, 400);
+            seriesRR.appendData(new DataPoint(x, y), true, 1000);
         }
 
         x = 0 ;
-        y = 1 ;
-        for (int i = 0; i < 400; i++) {
-            x += 0.1 ;
+        y = 0.5 ;
+        for (int i = 0; i < 1000; i++) {
+            x += 0.2 ;
             if(x > 25) {
-                y += 0.001 ;
+                if(y<0.8) {
+                    y += 0.001;
+                }
             }
-            seriesTemp.appendData(new DataPoint(x, y), true, 400);
+            seriesTemp.appendData(new DataPoint(x, y), true, 1000);
         }
     }
 
