@@ -37,10 +37,10 @@
     <com.jjoe64.graphview.GraphView
         android:id="@+id/graphBP_Scen1"
         android:layout_width="350dp"
-        android:layout_height="50dp"
         android:layout_marginBottom="12dp"
         android:layout_above="@+id/graphPulse_Scen1"
-        android:layout_alignStart="@+id/graphPulse_Scen1" />
+        android:layout_alignStart="@+id/graphPulse_Scen1"
+        android:layout_height="50dp" />
 
     <com.jjoe64.graphview.GraphView
         android:id="@+id/graphPulse_Scen1"
