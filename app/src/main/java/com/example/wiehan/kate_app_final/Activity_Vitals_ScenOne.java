@@ -1,8 +1,8 @@
 package com.example.wiehan.kate_app_final;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -11,7 +11,7 @@ import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
-public class Activity_Vitals extends AppCompatActivity {
+public class Activity_Vitals_ScenOne extends AppCompatActivity {
 
     GraphView graphBP ;
     GraphView graphPulse ;
@@ -29,15 +29,15 @@ public class Activity_Vitals extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vitals);
+        setContentView(R.layout.activity_vitals_scen_one);
 
-        BPNum = (TextView)  findViewById(R.id.BPNum) ;
-        pulseNum = (TextView)  findViewById(R.id.pulseNum) ;
-        RRNum = (TextView)  findViewById(R.id.RRNum) ;
-        tempNum = (TextView)  findViewById(R.id.tempNum) ;
-        summaryText = (TextView) findViewById(R.id.summaryText) ;
+        BPNum = (TextView)  findViewById(R.id.BPNum_Scen1) ;
+        pulseNum = (TextView)  findViewById(R.id.pulseNum_Scen1) ;
+        RRNum = (TextView)  findViewById(R.id.RRNum_Scen1) ;
+        tempNum = (TextView)  findViewById(R.id.tempNum_Scen1) ;
+        summaryText = (TextView) findViewById(R.id.summaryText_Scen1) ;
 
-        graphBP = (GraphView)findViewById(R.id.graphBP) ;
+        graphBP = (GraphView)findViewById(R.id.graphBP_Scen1) ;
         graphBP.getGridLabelRenderer().setHorizontalLabelsVisible(false);
         graphBP.getGridLabelRenderer().setVerticalLabelsVisible(false);
         graphBP.getViewport().setYAxisBoundsManual(true);
@@ -46,38 +46,38 @@ public class Activity_Vitals extends AppCompatActivity {
 
 
 
-        graphPulse = (GraphView)findViewById(R.id.graphPulse) ;
+        graphPulse = (GraphView)findViewById(R.id.graphPulse_Scen1) ;
         graphPulse.getGridLabelRenderer().setHorizontalLabelsVisible(false);
         graphPulse.getGridLabelRenderer().setVerticalLabelsVisible(false);
         graphPulse.getViewport().setYAxisBoundsManual(true);
         graphPulse.getViewport().setMinY(0);
         graphPulse.getViewport().setMaxY(1);
 
-        graphRR = (GraphView)findViewById(R.id.graphRR) ;
+        graphRR = (GraphView)findViewById(R.id.graphRR_Scen1) ;
         graphRR.getGridLabelRenderer().setHorizontalLabelsVisible(false);
         graphRR.getGridLabelRenderer().setVerticalLabelsVisible(false);
         graphRR.getViewport().setYAxisBoundsManual(true);
         graphRR.getViewport().setMinY(0);
         graphRR.getViewport().setMaxY(1);
 
-        graphTemp = (GraphView)findViewById(R.id.graphTemp) ;
+        graphTemp = (GraphView)findViewById(R.id.graphTemp_Scen1) ;
         graphTemp.getGridLabelRenderer().setHorizontalLabelsVisible(false);
         graphTemp.getGridLabelRenderer().setVerticalLabelsVisible(false);
         graphTemp.getViewport().setYAxisBoundsManual(true);
         graphTemp.getViewport().setMinY(0);
         graphTemp.getViewport().setMaxY(1);
 
-        Button buttonConGame = (Button) findViewById(R.id.buttonConGame);
+        Button buttonConGame = (Button) findViewById(R.id.buttonConGame_Scen1);
 
         buttonConGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Activity_Game.class);
+                Intent intent = new Intent(getApplicationContext(), Activity_Game_Scen1.class);
                 startActivity(intent);
             }
         });
 
-        final Button patientOne = (Button) findViewById(R.id.patient_one_Button) ;
+        final Button patientOne = (Button) findViewById(R.id.patient_one_Button_Scen1) ;
 
         patientOne.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,7 +109,7 @@ public class Activity_Vitals extends AppCompatActivity {
             }
         });
 
-        final Button patientTwo = (Button) findViewById(R.id.patient_two_Button) ;
+        final Button patientTwo = (Button) findViewById(R.id.patient_two_Button_Scen1) ;
 
         patientTwo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -241,4 +241,3 @@ public class Activity_Vitals extends AppCompatActivity {
     }
 
 }
-

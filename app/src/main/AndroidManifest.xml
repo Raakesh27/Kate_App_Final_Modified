@@ -15,12 +15,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity_Two" />
-        <activity android:name=".Activity_Vitals" />
-        <activity android:name=".Activity_Game" />
-        <activity android:name=".Activity_Scenario" />
-        <activity android:name=".Advance_Display" />
-        <activity android:name=".Action_Plan"></activity>
+        <activity android:name=".Activity_Two_ScenTwo" />
+        <activity android:name=".Activity_Vitals_ScenTwo" />
+        <activity android:name=".Activity_Game_Scen2" />
+        <activity android:name=".Activity_Scenario_ScenTwo" />
+        <activity android:name=".Advance_Display_ScenTwo" />
+        <activity android:name=".Action_Plan" />
+        <activity android:name=".Activity_Two_ScenOne" />
+        <activity android:name=".Activity_Two_ScenThree" />
+        <activity android:name=".Activity_Two_ScenFour" />
+        <activity android:name=".Activity_Vitals_ScenOne" />
+        <activity android:name=".Activity_Game_Scen1" />
+        <activity android:name=".Activity_Scenario_ScenOne" />
+        <activity android:name=".Advance_Display_ScenOne"></activity>
     </application>
 
 </manifest>

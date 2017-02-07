@@ -27,7 +27,7 @@
         android:text="Briefly write down what your action plan would be based on the situation " />
 
     <Button
-        android:text="Create Action Plan"
+        android:text="Begin Next Scenario"
         android:id="@+id/buttonNextScenario"
         android:layout_height="75dp"
         style="@android:style/Widget.DeviceDefault.Light.Button.Inset"

@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textShortGame"
+        android:id="@+id/textShortGame_Scen2"
         android:background="@drawable/my_personal_border"
         android:typeface="sans"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -19,7 +19,7 @@
 
     <Button
         android:text="Continue"
-        android:id="@+id/buttonGame"
+        android:id="@+id/buttonGame_Scen2"
         android:layout_height="75dp"
         style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
         android:layout_width="225dp"

@@ -11,7 +11,7 @@ import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
-public class Advance_Display extends AppCompatActivity {
+public class Advance_Display_ScenTwo extends AppCompatActivity {
 
     GraphView graphBBAdvance ;
     GraphView graphPulseAdvance ;
@@ -35,27 +35,27 @@ public class Advance_Display extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_advance_display);
+        setContentView(R.layout.activity_advance_display_scen_two);
 
-        BPNumAdvance = (TextView)  findViewById(R.id.graphBPAdvance) ;
-        pulseNumAdvance = (TextView)  findViewById(R.id.pulseNumAdvance) ;
-        RRNumAdvance = (TextView)  findViewById(R.id.RRNumAdvance) ;
-        tempNumAdvance = (TextView)  findViewById(R.id.tempNumAdvance) ;
-        textInfo = (TextView) findViewById(R.id.textInfo) ;
+        BPNumAdvance = (TextView)  findViewById(R.id.BPNum_Scen2) ;
+        pulseNumAdvance = (TextView)  findViewById(R.id.pulseNumAdvance_Scen2) ;
+        RRNumAdvance = (TextView)  findViewById(R.id.RRNumAdvance_Scen2) ;
+        tempNumAdvance = (TextView)  findViewById(R.id.tempNumAdvance_Scen2) ;
+        textInfo = (TextView) findViewById(R.id.textInfo_Scen2) ;
 
-        BPSumP1 = (TextView) findViewById(R.id.BPsumP1)  ;
-        BPSumP2 = (TextView) findViewById(R.id.BPsumP2)  ;
-        pulseSumP1 = (TextView) findViewById(R.id.pulseSumP1) ;
-        pulseSumP2 = (TextView) findViewById(R.id.pulseSumP2) ;
-        RRSumP1 = (TextView) findViewById(R.id.RRSumP1) ;
-        RRSumP2 = (TextView) findViewById(R.id.RRSumP2) ;
-        tempSumP1 = (TextView) findViewById(R.id.tempSumP1) ;
-        tempSumP2 = (TextView) findViewById(R.id.tempSumP2) ;
+        BPSumP1 = (TextView) findViewById(R.id.BPsumP1_Scen2)  ;
+        BPSumP2 = (TextView) findViewById(R.id.BPsumP2_Scen2)  ;
+        pulseSumP1 = (TextView) findViewById(R.id.pulseSumP1_Scen2) ;
+        pulseSumP2 = (TextView) findViewById(R.id.pulseSumP2_Scen2) ;
+        RRSumP1 = (TextView) findViewById(R.id.RRSumP1_Scen2) ;
+        RRSumP2 = (TextView) findViewById(R.id.RRSumP2_Scen2) ;
+        tempSumP1 = (TextView) findViewById(R.id.tempSumP1_Scen2) ;
+        tempSumP2 = (TextView) findViewById(R.id.tempSumP2_Scen2) ;
 
-        textPatientInfo = (TextView) findViewById(R.id.textPatientInfo) ;
-        textPatientNo = (TextView) findViewById(R.id.textPatientNo) ;
+        textPatientInfo = (TextView) findViewById(R.id.textPatientInfo_Scen2) ;
+        textPatientNo = (TextView) findViewById(R.id.textPatientNo_Scen2) ;
 
-        graphBBAdvance = (GraphView)findViewById(R.id.graphBBAdvance) ;
+        graphBBAdvance = (GraphView)findViewById(R.id.graphBBAdvance_Scen2) ;
         graphBBAdvance.getGridLabelRenderer().setHorizontalLabelsVisible(false);
         graphBBAdvance.getGridLabelRenderer().setVerticalLabelsVisible(false);
         graphBBAdvance.getViewport().setScrollable(true);
@@ -67,7 +67,7 @@ public class Advance_Display extends AppCompatActivity {
         graphBBAdvance.getViewport().setMinY(0);
         graphBBAdvance.getViewport().setMaxY(1.5);
 
-        graphPulseAdvance = (GraphView)findViewById(R.id.graphPulseAdvance) ;
+        graphPulseAdvance = (GraphView)findViewById(R.id.graphPulseAdvance_Scen2) ;
         graphPulseAdvance.getGridLabelRenderer().setHorizontalLabelsVisible(false);
         graphPulseAdvance.getGridLabelRenderer().setVerticalLabelsVisible(false);
         graphPulseAdvance.getViewport().setScrollable(true);
@@ -79,7 +79,7 @@ public class Advance_Display extends AppCompatActivity {
         graphPulseAdvance.getViewport().setMinY(0);
         graphPulseAdvance.getViewport().setMaxY(1);
 
-        graphRRAdvance = (GraphView)findViewById(R.id.graphRRAdvance) ;
+        graphRRAdvance = (GraphView)findViewById(R.id.graphRRAdvance_Scen2) ;
         graphRRAdvance.getGridLabelRenderer().setHorizontalLabelsVisible(false);
         graphRRAdvance.getGridLabelRenderer().setVerticalLabelsVisible(false);
         graphRRAdvance.getViewport().setScrollable(true);
@@ -91,7 +91,7 @@ public class Advance_Display extends AppCompatActivity {
         graphRRAdvance.getViewport().setMinY(0);
         graphRRAdvance.getViewport().setMaxY(1);
 
-        graphTempAdvance = (GraphView)findViewById(R.id.graphTempAdvance) ;
+        graphTempAdvance = (GraphView)findViewById(R.id.graphTempAdvance_Scen2) ;
         graphTempAdvance.getGridLabelRenderer().setHorizontalLabelsVisible(false);
         graphTempAdvance.getGridLabelRenderer().setVerticalLabelsVisible(false);
         graphTempAdvance.getViewport().setScrollable(true);
@@ -112,7 +112,7 @@ public class Advance_Display extends AppCompatActivity {
         tempSumP1.setText("Temp 98.6");
         tempSumP2.setText("Temp 97.2");
 
-        Button createActionPlan = (Button) findViewById(R.id.buttonCAPAdvance);
+        Button createActionPlan = (Button) findViewById(R.id.buttonCAPAdvance_Scen2);
 
         createActionPlan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,7 +122,7 @@ public class Advance_Display extends AppCompatActivity {
             }
         });
 
-        final Button patientOne = (Button) findViewById(R.id.patient_One_Button_Adv) ;
+        final Button patientOne = (Button) findViewById(R.id.patient_One_Button_Adv_Scen2) ;
 
         patientOne.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -156,7 +156,7 @@ public class Advance_Display extends AppCompatActivity {
             }
         });
 
-        final Button patientTwo = (Button) findViewById(R.id.patient_Two_Button_Adv) ;
+        final Button patientTwo = (Button) findViewById(R.id.patient_Two_Button_Adv_Scen2) ;
 
         patientTwo.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -6,23 +6,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class Activity_Scenario extends AppCompatActivity {
+public class Activity_Two_ScenTwo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scenario);
+        setContentView(R.layout.activity_two_scen_two);
 
+        Button viewVitalsButton = (Button) findViewById(R.id.viewVitalsButtonScenTwo);
 
-        Button buttonContinue = (Button) findViewById(R.id.buttonContinue);
-
-        buttonContinue.setOnClickListener(new View.OnClickListener() {
+        viewVitalsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Advance_Display.class);
+                Intent intent = new Intent(getApplicationContext(), Activity_Vitals_ScenTwo.class);
                 startActivity(intent);
             }
         });
 
+
+
+
     }
+
 }
+
