@@ -27,7 +27,8 @@
         <activity android:name=".Activity_Vitals_ScenOne" />
         <activity android:name=".Activity_Game_Scen1" />
         <activity android:name=".Activity_Scenario_ScenOne" />
-        <activity android:name=".Advance_Display_ScenOne"></activity>
+        <activity android:name=".Advance_Display_ScenOne" />
+        <activity android:name=".Activity_Vitals_ScenThree"></activity>
     </application>
 
 </manifest>
