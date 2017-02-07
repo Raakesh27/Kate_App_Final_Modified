@@ -53,16 +53,6 @@
         android:layout_toEndOf="@+id/textPulseAdvance_Scen1" />
 
     <TextView
-        android:layout_height="50dp"
-        android:textSize="28sp"
-        android:textStyle="normal|bold"
-        android:textAlignment="textEnd"
-        android:layout_width="100dp"
-        android:id="@+id/tempNumAdvance_Scen1"
-        android:layout_below="@+id/graphRRAdvance_Scen1"
-        android:layout_toEndOf="@+id/textTempAdvance_Scen1" />
-
-    <TextView
         android:text="Pulse"
         android:id="@+id/textPulseAdvance_Scen1"
         android:textSize="28sp"
@@ -127,10 +117,10 @@
     <com.jjoe64.graphview.GraphView
         android:id="@+id/graphTempAdvance_Scen1"
         android:layout_width="350dp"
-        android:layout_height="50dp"
         android:layout_below="@+id/graphRRAdvance_Scen1"
         android:layout_toEndOf="@+id/tempNumAdvance_Scen1"
-        android:layout_marginTop="12dp" />
+        android:layout_marginTop="12dp"
+        android:layout_height="75dp" />
 
     <TextView
         android:layout_width="100dp"
@@ -206,5 +196,16 @@
         android:layout_marginBottom="39dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_height="50dp"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="textEnd"
+        android:layout_width="100dp"
+        android:id="@+id/tempNumAdvance_Scen1"
+        android:layout_alignBottom="@+id/graphTempAdvance_Scen1"
+        android:layout_toEndOf="@+id/textTempAdvance_Scen1"
+        android:layout_marginBottom="12dp" />
 
 </RelativeLayout>
