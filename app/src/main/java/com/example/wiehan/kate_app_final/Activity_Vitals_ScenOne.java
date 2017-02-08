@@ -122,7 +122,7 @@ public class Activity_Vitals_ScenOne extends AppCompatActivity {
                 BPNum.setText("124/80 ");
                 pulseNum.setText("78 ");
                 RRNum.setText("16 ");
-                tempNum.setText("97.2 ");
+                tempNum.setText("97.2");
                 summaryText.setText("\nSummary: 25 y/o male, Broken collarbone, Minor bruises.");
 
                 seriesBP = new LineGraphSeries<DataPoint>();
